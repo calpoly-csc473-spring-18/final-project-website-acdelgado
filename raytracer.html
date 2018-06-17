@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CPE 473 Final Project</title>
+</head>
+<body>
+<center>
+<h1>Final Project: Soft Shadows</h1>
+<h2>Anthony Delgado, CPE 473 Spring 2018</h2>
+</center>
+<p>Sphere with point light:</p>
+<img src="hard/simple1.png"></img>
+<p>Sphere with area light of 64:</p>
+<img src="soft/simple64.png"></img>
+<h2>Soft Shadows</h2>
+<p>For my final project, I decided to implement soft shadows for my raytracer.
+In order to implement this, I treated each point light in a particular scene
+as a light with a specified area, and took sample points from that area light.
+For each point I intersected, I generated sample points on the area light and calculated
+the average amount of shading for that point.</p>
+<h3>More Examples:</h3>
+<p>Before:</p>
+<img src="hard/pbr1.png"></img>
+<p>After:</p>
+<img src="soft/pbr16.png"></img>
+<h2>Software Design</h2>
+<p>My final raytracer is based heavily off of Ian Dunn's own raytracer, and so I am
+not responsible for the very organized design of my final raytracer.
+However, my old raytracer did have a very similar structure of the Object classes,
+which made it very easy to add features to my raytracer. This was most helpful when
+intersecting rays on different objects, as well as calculating normals for points
+on different objects. In the final raytracer, this structure can be found in the
+"Objects" directory.</p>
+<h3>Resources:</h3>
+<a href="https://www.cs.unc.edu/~dm/UNC/COMP236/LECTURES/SoftShadows">UNC lecture slides on implementing soft shadows</a>.
+<p>Ian Dunn's Lectures</p>
+</body>
+</html>
